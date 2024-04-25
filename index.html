@@ -1,13 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style/main.css" type="text/css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="images/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="images/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="images/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="images/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- <link rel="stylesheet" href="style/main.less" type="text/css" /> -->
+        <!-- <link
+            href="src/font/EuclidCircularB-Medium.woff2"
+            rel="preload"
+            as="font"
+            crossorigin
+        /> -->
+        <link
+            rel="stylesheet/less"
+            type="text/css"
+            href="style/main.less"
+            data-rel="stylesheet"
+        />
+        <script
+            src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=3c5b2a10-bec8-4a2d-bd91-ad17615eb24e"
+            type="text/javascript"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.13.0/less.min.js"></script>
 
-</head>
-<body>
-    
-</body>
-</html>пше
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="common">
+                <div class="common__logo">
+                    <a class="logo" href="#">
+                        <img class="logo__img" src="images/logo.svg" alt="" />
+                    </a>
+                </div>
+                <div class="common__name">гросс маркет</div>
+            </div>
+            <div class="call">
+                <a class="call__logo" href="#">
+                    <img lass="phone-img" src="images/phone.svg" alt="" />
+                </a>
+            </div>
+            <div class="relate">
+                <div class="number">+7 (926) 433-14-16</div>
+                <button
+                    class="anketa"
+                    onclick="window.location.href = 'anketa.html'"
+                >
+                    заполнить анкету
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="open">
+                <div class="container-wrapper">
+                    <div class="swiper slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slider__item">
+                                <h1 class="advantages">
+                                    У тебя к этому талант
+                                </h1>
+                                <div class="foto-block">
+                                    <picture class="foto-block pict">
+                                        <source
+                                            media="(min-width: 1280px)"
+                                            srcset="images/prew-desk.svg"
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="images/prew-tablet.svg"
+                                        />
+                                        <img
+                                            class="foto"
+                                            src="images/prew-mobil.svg"
+                                            alt=""
+                                        /><span class="circl-figure profession"
+                                            >пекарь</span
+                                        >
+                                        <span class="circl-figure name"
+                                            >валентин</span
+                                        >
+                                    </picture>
+                                </div>
+                            </div>
+                            <div
+                                class="swiper-slide slider__item swiper-slide-none"
+                            >
+                                <h1 class="advantages">
+                                    У тебя всё под контролем
+                                </h1>
+                                <div class="foto-block">
+                                    <picture class="foto-block pict">
+                                        <source
+                                            media="(min-width: 1280px)"
+                                            srcset="images/slide2.svg"
+                                        />
+                                        <source
+                                            media="(min-width: 768px)"
+                                            srcset="images/prew-tablet.svg"
+                                        />
+                                        <img
+                                            class="foto"
+                                            src="images/prew-mobil.svg"
+                                            alt=""
+                                        /><span class="circl-figure profession"
+                                            >товаровед</span
+                                        >
+                                        <span class="circl-figure name"
+                                            >ксения</span
+                                        >
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-btn">
+                        <button class="swiper-button-pre swiper-btn">◀</button>
+                        <span class="">|</span>
+                        <button
+                            class="swiper-button-nex swiper-btn swiper-btn-active"
+                        >
+                            ▶
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="vacancy">
+                <button
+                    class="anketa-btn"
+                    onclick="window.location.href = 'anketa.html'"
+                >
+                    заполнить анкету
+                </button>
+                <div class="container-wrapper">
+                    <div class="navigation">
+                        <h2 class="vacancy__title title">
+                            вакансии в гросс маркете
+                        </h2>
+                        <div class="slider-btn">
+                            <button class="swiper-button-pre-vac swiper-btn">
+                                ◀
+                            </button>
+                            <button
+                                class="swiper-button-nex-vac swiper-btn swiper-btn-active"
+                            >
+                                ▶
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-container vacancy__slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img
+                                    class="vacancy-foto"
+                                    src="images/deliver.svg"
+                                    alt=""
+                                />
+                                <p class="circl-figure vacancy-proff">
+                                    товаровед
+                                </p>
+                                <p class="vacancy-do">
+                                    Доставка товара по магазинам и гипермаркетам
+                                    компании в обслуживаемом регионе
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    class="vacancy-foto"
+                                    src="images/driver.svg"
+                                    alt=""
+                                />
+                                <p class="circl-figure vacancy-proff">
+                                    водитель
+                                </p>
+                                <p class="vacancy-do">
+                                    Доставка товара по магазинам и гипермаркетам
+                                    компании в обслуживаемом регионе
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    class="vacancy-foto"
+                                    src="images/bread-cooker.svg"
+                                    alt=""
+                                />
+                                <p class="circl-figure vacancy-proff">пекарь</p>
+                                <p class="vacancy-do">
+                                    Доставка товара по магазинам и гипермаркетам
+                                    компании в обслуживаемом регионе
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    class="vacancy-foto"
+                                    src="images/seller.svg"
+                                    alt=""
+                                />
+                                <p class="circl-figure vacancy-proff">
+                                    продавец
+                                </p>
+                                <p class="vacancy-do">
+                                    Доставка товара по магазинам и гипермаркетам
+                                    компании в обслуживаемом регионе
+                                </p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img
+                                    class="vacancy-foto"
+                                    src="images/cook.svg"
+                                    alt=""
+                                />
+                                <p class="circl-figure vacancy-proff">повар</p>
+                                <p class="vacancy-do">
+                                    Доставка товара по магазинам и гипермаркетам
+                                    компании в обслуживаемом регионе
+                                </p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img
+                                    class="vacancy-foto"
+                                    src="images/moner.svg"
+                                    alt=""
+                                />
+                                <p class="circl-figure vacancy-proff">кассир</p>
+                                <p class="vacancy-do">
+                                    Доставка товара по магазинам и гипермаркетам
+                                    компании в обслуживаемом регионе
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    class="vacancy-foto"
+                                    src="images/receiver.svg"
+                                    alt=""
+                                />
+                                <p class="circl-figure vacancy-proff">
+                                    приемщик
+                                </p>
+                                <p class="vacancy-do">
+                                    Доставка товара по магазинам и гипермаркетам
+                                    компании в обслуживаемом регионе
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="instagram">
+                <div class="container-wrapper">
+                    <h2 class="instagram__title title">мы в инстаграме</h2>
+                    <div class="instagram__data"></div>
+                    <button class="instagram__button">показать ещё</button>
+                </div>
+            </section>
+
+            <section class="geography">
+                <div class="container-wrapper">
+                    <h2 class="geography__title">география</h2>
+                    <div class="map" id="myMap">
+                        <div class="filter-block">
+                            <button class="ur-btn filter-btn">юрлица</button>
+                            <button class="fiz-btn filter-btn">физлица</button>
+                            <button
+                                class="all-btn filter-btn filter-btn-active"
+                            >
+                                показать все
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           
+        </main>
+ 
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="common">
+                <div class="common__logo">
+                    <a class="logo" href="#">
+                        <img
+                            class="logo__img"
+                            src="images/logo.svg"
+                            alt=""
+                        />
+                    </a>
+                </div>
+                <div class="common__name">гросс маркет</div>
+            </div>
+            <a class="share title" href="#">поделиться</a>
+            <div class="social">
+                <a class="social__site" href="#">
+                    <svg>
+                        <image href="images/fb.svg" />
+                    </svg>
+                </a>
+                <a class="social__site" href="#">
+                    <svg>
+                        <image href="images/vk.svg" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="copirite">
+            <a class="copirite__politic" href="javascript:void(0)">
+                Политика обработки персональных данных
+            </a>
+            <div class="modal">
+                <div class="content">
+                    <div class="close">&times;</div>
+                    <h1 class="content__title">Обработка данных</h1>
+                    <h2 class="content__title-parag">
+                        1. Что регулирует настоящая политика
+                        конфиденциальности
+                    </h2>
+                    <p class="content__parag">
+                        Настоящая политика конфиденциальности (далее —
+                        Политика) действует в отношении всей информации,
+                        включая персональные данные в понимании
+                        применимого законодательства (далее —
+                        «Персональная информация»), которую ООО «Гросс
+                        маркет» и/или его аффилированные лица, в том
+                        числе входящие в одну группу с ООО «Гросс
+                        маркет» (далее — «Гросс маркет»), могут
+                        получитьо Вас в процессе использования Вами
+                        любых сайтов, программ, продуктов и/или сервисов
+                        Гросс маркет (далее вместе «Сервисы»),
+                        информацию о которых Гросс маркет может также
+                        получать Персональную информацию от своих
+                        партнеров (далее — «Партнеры»), сайты,
+                        программы, продукты или сервисы которых Вы
+                        используете (например, от рекламодателей Гросс
+                        маркет или службами такси). В таких случаях
+                        передача Персональной информации возможна только
+                        в случаях, установленных применимым
+                        законодательством, и осуществляется на основании
+                        специальных договоров между Гросс маркет и
+                        каждым из Партнеров.
+
+                        <span class="content__parag-span">
+                            Пожалуйста, обратите внимание, что
+                            использование любого из Сайтов и/или
+                            Сервисов может регулироваться
+                            дополнительными условиями, которые могут
+                            вносить в настоящую Политику изменения и/или
+                            дополнения, и/или иметь специальные условия
+                            в отношении персональной информации,
+                            размещенные в соответствующих разделах
+                            документов для таких Сайтов /или Сервисов.
+                        </span>
+                    </p>
+                    <h2 class="content__title-parag">
+                        2. Кто обрабатывает информацию
+                    </h2>
+                    <p class="content__parag">
+                        Для обеспечения использования Вами Сайтов и
+                        Сервисов Ваша Персональная информация собирается
+                        и используется Яндексом, в том числе включая
+                        общество с ограниченной ответственностью «Гросс
+                        маркет», юридическое лицо, созданное по
+                        законодательству Российской Федерации и
+                        зарегистрированное по адресу: 123351, Россия,
+                        Москва, ул. Гроссова, д. 12 (ООО «Гросс
+                        маркет»), или его аффилированным лицом,
+                        предоставляющим соответствующий Сервис в иных
+                        юрисдикциях. С информацией о том, какое лицо
+                        предоставляет тот или иной Сервис, Вы можете
+                        ознакомиться в условиях использования
+                        соответствующего Сервиса.
+                    </p>
+                    <h2 class="content__title-parag">
+                        3. Какова цель данной Политики
+                    </h2>
+                    <p class="content__parag">
+                        Защита Вашей Персональной информации и Вашей
+                        конфиденциальности чрезвычайно важны для Гросс
+                        маркета. Поэтому при использовании Вами Сайтов и
+                        Сервисов Гросс маркет защищает и обрабатывает
+                        Вашу Персональную информацию в строгом
+                        соответствии с применимым законодательством.
+                    </p>
+                    <h2 class="content__title-parag">
+                        4. Какую Персональную информацию о Вас собирает
+                        Гросс маркет
+                    </h2>
+                    <p class="content__parag">
+                        Для обеспечения использования Вами Сайтов и
+                        Сервисов Ваша Персональная информация собирается
+                        и используется Яндексом, в том числе включая
+                        общество с ограниченной ответственностью «Гросс
+                        маркет», юридическое лицо, созданное по
+                        законодательству Российской Федерации и
+                        зарегистрированное по адресу: 123351, Россия,
+                        Москва, ул. Гроссова, д. 12 (ООО «Гросс
+                        маркет»), или его аффилированным лицом,
+                        предоставляющим соответствующий Сервис в иных
+                        юрисдикциях. С информацией о том, какое лицо
+                        предоставляет тот или иной Сервис, Вы можете
+                        ознакомиться в условиях использования
+                        соответствующего Сервиса.
+                    </p>
+                </div>
+            </div>
+            <p class="copirite__sight" href="#">© Гросс маркет 2020</p>
+        </div>
+    </footer>   </body>
+    <script src="index.js" type="text/javascript"></script>
+</html>

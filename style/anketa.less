@@ -1,0 +1,542 @@
+.close-anketa__link {
+    font-size: 46px;
+    display: block;
+    margin-top: -21px;
+}
+.anketa {
+    padding: 40px 15px 0;
+    .work-title {
+        font-size: 48px;
+        line-height: 44px;
+        margin-bottom: 47px;
+    }
+
+    #form {
+        font-size: 14px;
+        line-height: 17.75px;
+        margin-bottom: 46px;
+        .vacancy-label {
+            margin-bottom: 10px;
+        }
+        #vacancy {
+            background: #f5f5f5;
+            height: 47px;
+            border-radius: 8px;
+            border-color: transparent;
+            font-size: 18px;
+            color: lightgrey;
+            padding: 11px 10px 3px;
+            option {
+                color: #000;
+            }
+        }
+
+        input {
+            background: #f5f5f5;
+            height: 47px;
+            border-radius: 8px;
+            border-color: transparent;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        .block {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 33px;
+        }
+        .name-block {
+            .name {
+                margin-bottom: 10px;
+            }
+        }
+        .born {
+            margin-bottom: 14px;
+        }
+        #dob {
+            padding: 5px 13px 0px;
+            margin-top: -5px;
+            color: lightgray;
+        }
+        .sex-block {
+            margin-bottom: 41px;
+            &__label {
+                margin-bottom: 24px;
+            }
+            &__gender {
+                display: flex;
+                align-items: center;
+                input[type="radio"] {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    min-width: 24px;
+                    width: 24px;
+                    height: 24px;
+                    border: 2px solid transparent;
+                    background-color: #f5f5f5;
+                    border-radius: 50%;
+                    position: relative;
+                    margin-right: 12px;
+                }
+
+                input[type="radio"]::before {
+                    content: "";
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: black;
+                }
+
+                input[type="radio"]:not(:checked)::before {
+                    display: none;
+                }
+                .man {
+                    margin-right: 92px;
+                }
+            }
+        }
+        .phone-block {
+            margin-bottom: 32px;
+            .phone {
+                margin-bottom: 10px;
+            }
+            input {
+                padding: 0px 13px;
+                color: lightgray;
+            }
+        }
+        .mail-block {
+            margin-bottom: 32px;
+            .mail {
+                margin-bottom: 10px;
+            }
+            input {
+                padding: 0px 13px;
+                color: lightgray;
+            }
+        }
+        .document-block {
+            .document {
+                margin-bottom: 17px;
+            }
+            input {
+                padding: 0px 13px;
+            }
+            #message {
+                background-color: #f5f5f5;
+                border-color: transparent;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+            .file-label {
+                padding: 13px 22px 0;
+                box-sizing: border-box;
+                background-color: #f5f5f5;
+                height: 47px;
+                border-radius: 8px;
+                color: lightgrey;
+                svg {
+                    display: inline-block;
+                    color: lightgrey;
+                    vertical-align: middle;
+                    margin-right: 12px;
+                }
+            }
+        }
+        .captcha-block {
+            margin-bottom: 26px;
+            .captcha {
+                margin-bottom: 10px;
+            }
+
+            .captcha-label {
+                display: flex;
+                height: 47px;
+                border-radius: 8px;
+                padding: 0px 15px 0;
+                align-items: center;
+                box-sizing: border-box;
+                background-color: #f5f5f5;
+                color: lightgrey;
+                position: relative;
+                justify-content: space-between;
+                input[type="checkbox"] {
+                    min-width: 24px;
+                    height: 24px;
+                    margin-right: -172px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background-color: #fff;
+                    position: relative;
+                }
+
+                input[type="checkbox"]::before {
+                    content: "\2713";
+                    color: #000;
+                    font-size: 21px;
+                    position: absolute;
+                    transform: translate(25%, -13%);
+                }
+
+                input[type="checkbox"]:not(:checked)::before {
+                    display: none;
+                }
+            }
+        }
+        .require {
+            color: lightgray;
+            display: inline-block;
+            margin-bottom: 28px;
+        }
+        .agree-block {
+            flex-direction: row;
+            margin-bottom: 26px;
+            input[type="checkbox"] {
+                height: 24px;
+                min-width: 24px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                margin-right: 12px;
+            }
+
+            input[type="checkbox"]::before {
+                content: "\2713";
+                color: #000;
+                position: absolute;
+                font-size: 21px;
+                transform: translate(26%, -12%);
+            }
+
+            input[type="checkbox"]:not(:checked)::before {
+                display: none;
+            }
+            .agree {
+                display: block;
+                margin-top: -5px;
+            }
+        }
+        .submit {
+            width: 100%;
+            height: 47px;
+            border-radius: 8px;
+            border-color: transparent;
+            font-size: 18px;
+            line-height: 22.82px;
+        }
+    }
+    .goal {
+        padding: 0 26px 0 0;
+        margin-bottom: 32px;
+        &__title {
+            font-size: 24px;
+            line-height: 30.43px;
+            margin-bottom: 26px;
+        }
+        &__content {
+            font-size: 18px;
+            line-height: 22.82px;
+            margin-bottom: 23px;
+            span {
+                display: block;
+            }
+        }
+    }
+}
+.success {
+    display: none;
+    padding: 0;
+    &__title {
+        font-size: 48px;
+        line-height: 44px;
+        margin-bottom: 33px;
+    }
+    &__content,
+    &__good-luck {
+        font-size: 18px;
+        line-height: 22.82px;
+        margin-bottom: 25px;
+    }
+    &__important {
+        position: relative;
+        padding-left: 14px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 17.75px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-color: yellow;
+        }
+    }
+    &__good-luck {
+        margin-bottom: 47px;
+    }
+}
+.success__question {
+    display: block;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 30.43px;
+    margin-bottom: 32px;
+}
+.number {
+    display: block;
+    text-decoration: none;
+    height: 73px;
+    border-radius: 8px;
+    font-size: 24px;
+    line-height: 30.43px;
+    background-color: #f5f5f5;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto 48px;
+}
+.footer--anketa {
+    padding: 48px 0 0 0;
+    .wrapper {
+        padding: 12px 1px 15px;
+
+        .common {
+            margin-bottom: 15px;
+        }
+        .social {
+            margin-bottom: 7px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .close-anketa__link {
+        font-size: 58px;
+    }
+    .anketa {
+        padding: 63px 39px 0;
+        .work-title {
+            font-size: 72px;
+            line-height: 66px;
+            margin-bottom: 74px;
+        }
+        #form {
+            margin-bottom: 72px;
+            .vacancy-label {
+                margin-bottom: 10px;
+            }
+            .block {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 33px;
+            }
+            .name-block {
+                margin-bottom: 32px;
+                .name {
+                    margin-bottom: 10px;
+                }
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                gap: 29px;
+                .born-block {
+                    margin-bottom: 4px;
+                }
+
+                .sex-block {
+                    margin-bottom: 12px;
+                    .man {
+                        margin-right: 73px;
+                    }
+                }
+            }
+            .document-block {
+                .document {
+                    margin-bottom: 12px;
+                }
+                #message {
+                    margin-bottom: 14px;
+                }
+            }
+            .captcha-block {
+                margin-bottom: 26px;
+                .captcha {
+                    margin-bottom: 13px;
+                }
+
+                .captcha-label {
+                    padding: 0px 16px 0;
+
+                    input[type="checkbox"] {
+                        margin-right: -157px;
+                    }
+                }
+            }
+            .require {
+                display: contents;
+            }
+            .agree-block {
+                flex-direction: row;
+                margin-bottom: 26px;
+            }
+        }
+        .goal {
+            padding: 0 6px 0 0;
+            margin-bottom: 25px;
+            &__title {
+                font-size: 32px;
+                line-height: 40.58px;
+                margin-bottom: 24px;
+            }
+            &__content {
+                margin-bottom: 23px;
+                span {
+                    display: inline;
+                }
+                .last {
+                    display: block;
+                }
+            }
+        }
+    }
+    .success {
+        &__title {
+            font-size: 72px;
+            line-height: 66px;
+            margin-bottom: 50px;
+        }
+        &__good-luck {
+            margin-bottom: 71px;
+        }
+    }
+    .success__question {
+        font-size: 32px;
+        line-height: 40.58px;
+        margin-bottom: 32px;
+    }
+    .number {
+        margin: 0 auto 73px;
+    }
+    .footer--anketa {
+        padding: 71px 37px 10px 38px;
+        .wrapper {
+            padding: 9px 10px 9px 8px;
+
+            .common {
+                margin-bottom: 0px;
+                margin-right: 24px;
+            }
+            .share {
+                margin-top: 0px;
+                margin-right: 0px;
+            }
+            .social {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .close-anketa__link {
+        font-size: 58px;
+    }
+    .anketa {
+        padding: 58px 165px 0;
+        .work-title {
+            margin-bottom: 52px;
+        }
+        .wrapper--desk {
+            display: flex;
+            gap: 124px;
+        }
+        #form {
+            margin-bottom: 72px;
+            max-width: 540px;
+            .vacancy-label {
+                margin-bottom: 10px;
+            }
+            .block {
+            }
+            .name-block {
+            }
+            .container {
+                column-gap: 32px;
+                .born-block {
+                    margin-bottom: 4px;
+                }
+
+                .sex-block {
+                    .man {
+                        margin-right: 33px;
+                    }
+                }
+            }
+            .document-block {
+                .document {
+                    margin-bottom: 12px;
+                }
+                #message {
+                    margin-bottom: 14px;
+                }
+            }
+            .container-argee {
+                column-gap: 3px;
+            }
+            .captcha-block {
+                padding-right: 10px;
+                .captcha-label {
+                    text-indent: 77px;
+                }
+            }
+            .require {
+                padding: 30px 21px 0 0;
+                display: block;
+            }
+            .agree-block {
+                flex-direction: row;
+                margin-bottom: 26px;
+                padding-right: 90px;
+            }
+        }
+
+        .goal {
+            padding: 31px 35px 0 1px;
+            margin-bottom: 25px;
+        }
+    }
+    .success {
+        max-width: 540px;
+        &__title {
+            font-size: 72px;
+            line-height: 66px;
+            margin-bottom: 50px;
+        }
+        &__good-luck {
+            margin-bottom: 180px;
+        }
+    }
+    .success__question {
+        font-size: 32px;
+        line-height: 40.58px;
+        margin: 114px 0px 32px;
+        min-width: 446px;
+    }
+    .number {
+        width: 90%;
+        margin: 0 auto 73px;
+        width: 100%;
+    }
+    .footer--anketa {
+        padding: 71px 165px 10px 165px;
+    }
+}

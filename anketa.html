@@ -1,11 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="images/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="images/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="images/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="images/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- <link rel="stylesheet" href="style/main.less" type="text/css" /> -->
+        <!-- <link
+            href="src/font/EuclidCircularB-Medium.woff2"
+            rel="preload"
+            as="font"
+            crossorigin
+        /> -->
+        <link
+            rel="stylesheet/less"
+            type="text/css"
+            href="style/main.less"
+            data-rel="stylesheet"
+        />
+        <link
+            rel="stylesheet/less"
+            type="text/css"
+            href="style/anketa.less"
+            data-rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.13.0/less.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </head>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="inputmask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <body>
+        <header class="header">
+            <div class="common">
+                <div class="common__logo">
+                    <a class="logo" href="#">
+                        <img class="logo__img" src="images/logo.svg" alt="" />
+                    </a>
+                </div>
+                <div class="common__name">гросс маркет</div>
+            </div>
+            <a class="close-anketa__link" href="index.html"> &times; </a>
+        </header>
+        <main>
+            <section class="anketa">
+                <h1 class="work-title">Работа твоей мечты</h1>
+                <div class="wrapper--desk">
+                    <form action="javascript:void(0)" method="post" id="form">
+                        <div class="vacancy-block block">
+                            <label for="vacancy" class="vacancy-label"
+                                >Вакансия *</label
+                            >
+                            <select
+                                id="vacancy"
+                                name="vacancy"
+                                aria-valuetext="товаровед"
+                                required
+                            >
+                                <option value=""></option>
+                                <option value="товаровед">товаровед</option>
+                                <option value="водитдель">водитель</option>
+                                <option value="продавец">продавец</option>
+                                <option value="коссир">кассир</option>
+                                <option value="доставщик">доставщик</option>
+                                <option value="повар">повар</option>
+                                <option value="пекарь">пекарь</option>
+                            </select>
+                        </div>
+                        <div class="name-block block">
+                            <label for="fullName" class="name">ФИО *</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                required
+                            />
+                        </div>
+                        <div class="container">
+                            <div class="born-block block">
+                                <label for="dob" class="born"
+                                    >Дата рождения *</label
+                                >
+                                <input
+                                    type="date"
+                                    id="dob"
+                                    name="dob"
+                                    placeholder="2002-07-28"
+                                    required
+                                />
+                            </div>
+                            <div class="sex-block block">
+                                <label class="sex-block__label">Пол *</label>
+                                <div class="sex-block__gender">
+                                    <input
+                                        type="radio"
+                                        id="gender1"
+                                        name="gender"
+                                        value="мужской"
+                                        required
+                                        checked
+                                    />
+                                    <label for="gender1" class="man"
+                                        >мужской</label
+                                    >
+
+                                    <input
+                                        type="radio"
+                                        id="gender2"
+                                        name="gender"
+                                        value="женский"
+                                    />
+                                    <label for="gender2">женский</label>
+                                </div>
+                            </div>
+
+                            <div class="phone-block block">
+                                <label for="phone" class="phone"
+                                    >Контактный телефон *</label
+                                >
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    required
+                                    placeholder="+7 ("
+                                />
+                            </div>
+                            <div class="mail-block block">
+                                <label for="email" class="mail"
+                                    >Электронная почта</label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="example@mail.com"
+                                />
+                            </div>
+                        </div>
+                        <div class="document-block block">
+                            <label for="resume" class="document">Резюме</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                cols="50"
+                            >
+                            </textarea>
+                            <label for="fileInput" class="file-label">
+                                <input
+                                    type="file"
+                                    id="fileInput"
+                                    style="display: none"
+                                />
+
+                                <svg
+                                    width="14"
+                                    height="24"
+                                    viewBox="0 0 14 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M12 5V17C12 19.757 9.757 22 7 22C4.243 22 2 19.757 2 17V5C2 3.346 3.346 2 5 2C6.654 2 8 3.346 8 5V14C8 14.551 7.551 15 7 15C6.449 15 6 14.551 6 14V6H4V14C4 15.657 5.343 17 7 17C8.657 17 10 15.657 10 14V5C10 2.239 7.761 0 5 0C2.239 0 0 2.239 0 5V17C0 20.866 3.134 24 7 24C10.866 24 14 20.866 14 17V5H12Z"
+                                        fill="lightgrey"
+                                    />
+                                </svg>
+                                выберите или перетащите файл
+                            </label>
+                        </div>
+                        <div class="container container-argee">
+                            <div class="captcha-block block">
+                                <label for="captcha" class="captcha"
+                                    >Капча</label
+                                >
+                                <label for="captcha" class="captcha-label">
+                                    <input type="checkbox" id="captcha" />
+                                    я не робот
+                                    <img
+                                        class="captcha-svg"
+                                        src="images/capcha.svg"
+                                        alt=""
+                                    />
+                                </label>
+                            </div>
+
+                            <label class="require"
+                                >* поля для обязательного заполнения</label
+                            >
+                        </div>
+                        <div class="agree-block block">
+                            <input
+                                type="checkbox"
+                                id="consent"
+                                name="consent"
+                                required
+                            />
+
+                            <label for="consent" class="agree">
+                                я подтверждаю согласие на обработку персональных
+                                данных и принимаю условия рассмотрения обращений
+                                *
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit">отправить</button>
+                    </form>
+                    <section class="success">
+                        <h1 class="success__title">Ждем тебя!</h1>
+                        <p class="success__content">
+                            В 2020 году самыми востребованными умениями и
+                            качествами на рынке труда станут:
+                        </p>
+                        <p class="success__important">
+                            Умение ставить цели, планировать свое время,
+                            инициативность, настойчивость, высокая мотивация,
+                            умение эффективно общаться, любознательность.
+                        </p>
+                        <p class="success__good-luck">
+                            А профессиональным навыкам можно научить любого
+                            человека.
+                        </p>
+                        
+                    </section>
+                    <section class="goal-number">
+                        <div class="goal">
+                            <h2 class="goal__title">Наша суперцель</h2>
+                            <p class="goal__content">
+                                — стать любимым магазином
+                                <span>для каждой российской семьи.</span>
+                            </p>
+                            <p class="goal__content">
+                                Сотни тысяч наших сотрудников ежедневно работают
+                                <span>над её достижением.</span>
+                            </p>
+                            <p class="goal__content">
+                                Мы уверены, что в ближайшие годы достигнем этого
+                                и будет здорово,
+                                <span class="last">если вместе с тобой.</span>
+                            </p>
+                        </div>
+                        <a class="success__question" href="javasctipt.void(0)"
+                            >Остались вопросы?</a
+                        >
+                        <a class="number" href="javascript.viod(0)"
+                            >+7 (926) 433-14-16
+                        </a>
+                    </section>
+                </div>
+            </section>
+
+            <footer class="footer footer--anketa">
+                <div class="wrapper">
+                    <div class="common">
+                        <div class="common__logo">
+                            <a class="logo" href="#">
+                                <img
+                                    class="logo__img"
+                                    src="images/logo.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+                        <div class="common__name">гросс маркет</div>
+                    </div>
+                    <a class="share title" href="#">поделиться</a>
+                    <div class="social">
+                        <a class="social__site" href="#">
+                            <svg>
+                                <image href="images/fb.svg" />
+                            </svg>
+                        </a>
+                        <a class="social__site" href="#">
+                            <svg>
+                                <image href="images/vk.svg" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="copirite">
+                    <a class="copirite__politic" href="javascript:void(0)">
+                        Политика обработки персональных данных
+                    </a>
+                    <div class="modal">
+                        <div class="content">
+                            <div class="close">&times;</div>
+                            <h1 class="content__title">Обработка данных</h1>
+                            <h2 class="content__title-parag">
+                                1. Что регулирует настоящая политика
+                                конфиденциальности
+                            </h2>
+                            <p class="content__parag">
+                                Настоящая политика конфиденциальности (далее —
+                                Политика) действует в отношении всей информации,
+                                включая персональные данные в понимании
+                                применимого законодательства (далее —
+                                «Персональная информация»), которую ООО «Гросс
+                                маркет» и/или его аффилированные лица, в том
+                                числе входящие в одну группу с ООО «Гросс
+                                маркет» (далее — «Гросс маркет»), могут
+                                получитьо Вас в процессе использования Вами
+                                любых сайтов, программ, продуктов и/или сервисов
+                                Гросс маркет (далее вместе «Сервисы»),
+                                информацию о которых Гросс маркет может также
+                                получать Персональную информацию от своих
+                                партнеров (далее — «Партнеры»), сайты,
+                                программы, продукты или сервисы которых Вы
+                                используете (например, от рекламодателей Гросс
+                                маркет или службами такси). В таких случаях
+                                передача Персональной информации возможна только
+                                в случаях, установленных применимым
+                                законодательством, и осуществляется на основании
+                                специальных договоров между Гросс маркет и
+                                каждым из Партнеров.
+
+                                <span class="content__parag-span">
+                                    Пожалуйста, обратите внимание, что
+                                    использование любого из Сайтов и/или
+                                    Сервисов может регулироваться
+                                    дополнительными условиями, которые могут
+                                    вносить в настоящую Политику изменения и/или
+                                    дополнения, и/или иметь специальные условия
+                                    в отношении персональной информации,
+                                    размещенные в соответствующих разделах
+                                    документов для таких Сайтов /или Сервисов.
+                                </span>
+                            </p>
+                            <h2 class="content__title-parag">
+                                2. Кто обрабатывает информацию
+                            </h2>
+                            <p class="content__parag">
+                                Для обеспечения использования Вами Сайтов и
+                                Сервисов Ваша Персональная информация собирается
+                                и используется Яндексом, в том числе включая
+                                общество с ограниченной ответственностью «Гросс
+                                маркет», юридическое лицо, созданное по
+                                законодательству Российской Федерации и
+                                зарегистрированное по адресу: 123351, Россия,
+                                Москва, ул. Гроссова, д. 12 (ООО «Гросс
+                                маркет»), или его аффилированным лицом,
+                                предоставляющим соответствующий Сервис в иных
+                                юрисдикциях. С информацией о том, какое лицо
+                                предоставляет тот или иной Сервис, Вы можете
+                                ознакомиться в условиях использования
+                                соответствующего Сервиса.
+                            </p>
+                            <h2 class="content__title-parag">
+                                3. Какова цель данной Политики
+                            </h2>
+                            <p class="content__parag">
+                                Защита Вашей Персональной информации и Вашей
+                                конфиденциальности чрезвычайно важны для Гросс
+                                маркета. Поэтому при использовании Вами Сайтов и
+                                Сервисов Гросс маркет защищает и обрабатывает
+                                Вашу Персональную информацию в строгом
+                                соответствии с применимым законодательством.
+                            </p>
+                            <h2 class="content__title-parag">
+                                4. Какую Персональную информацию о Вас собирает
+                                Гросс маркет
+                            </h2>
+                            <p class="content__parag">
+                                Для обеспечения использования Вами Сайтов и
+                                Сервисов Ваша Персональная информация собирается
+                                и используется Яндексом, в том числе включая
+                                общество с ограниченной ответственностью «Гросс
+                                маркет», юридическое лицо, созданное по
+                                законодательству Российской Федерации и
+                                зарегистрированное по адресу: 123351, Россия,
+                                Москва, ул. Гроссова, д. 12 (ООО «Гросс
+                                маркет»), или его аффилированным лицом,
+                                предоставляющим соответствующий Сервис в иных
+                                юрисдикциях. С информацией о том, какое лицо
+                                предоставляет тот или иной Сервис, Вы можете
+                                ознакомиться в условиях использования
+                                соответствующего Сервиса.
+                            </p>
+                        </div>
+                    </div>
+                    <p class="copirite__sight" href="#">© Гросс маркет 2020</p>
+                </div>
+            </footer>
+        </main>
+    </body>
+    <script src="app.js"></script>
 </html>

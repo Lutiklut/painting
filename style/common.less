@@ -1,0 +1,96 @@
+.circl-figure {
+    display: block;
+    position: absolute;
+    font-size: 24px;
+    line-height: 30.43px;
+    background-color: white;
+    border-radius: 26px;
+    padding: 12px 17px 12px 16px;
+}
+.title {
+    font-size: 24px;
+    line-height: 30.43px;
+    margin-bottom: 30px;
+}
+
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 32px;
+        line-height: 40.58px;
+    }
+}
+.common {
+    display: flex;
+    gap: 12px;
+
+    &__name {
+        font-size: 24px;
+        line-height: 25.43px;
+    }
+}
+@media (min-width: 768px) {
+    .common {
+        gap: 16px;
+        margin-right: 46px;
+        .common__logo {
+            padding-top: 8px;
+            .logo__img {
+                width: 22px;
+            }
+        }
+        &__name {
+            font-size: 32px;
+            line-height: 40.58px;
+        }
+    }
+}
+
+.logo,
+.logo__img {
+    display: block;
+}
+button {
+    cursor: pointer;
+}
+a{text-decoration: none;
+color: #000;}
+.slider-btn {
+    display: block;
+    position: absolute;
+    bottom: 48px;
+    width: 88px;
+    height: 44px;
+    background-color: white;
+    border-radius: 8px;
+    .swiper-btn {
+        border-color: transparent;
+        background-color: transparent;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #d6d6d6;
+    }
+    .swiper-btn-active{
+color: #000;
+    }
+    span {
+        font-size: 24px;
+    }
+}
+@media (min-width: 1280px) {
+    .container-wrapper{
+        max-width: 1110px;
+        margin: 0 auto;
+        overflow: visible;
+     
+    }
+    
+}
+[class*="ymaps-2"][class*="-ground-pane"] {
+	filter: grayscale(1) ; 
+	-ms-filter: grayscale(1) ;
+	-webkit-filter: grayscale(1) ;
+	-moz-filter: grayscale(1) ;
+	-o-filter: grayscale(1) ;
+}

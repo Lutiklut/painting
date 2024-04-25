@@ -1,0 +1,210 @@
+@media (min-width: 1280px) {
+    .header {
+        padding: 35px 165px 31px 164px;
+        display: flex;
+
+        .common {
+            gap: 16px;
+            margin-right: 46px;
+            .common__logo {
+                padding-top: 8px;
+                .logo__img {
+                    width: 22px;
+                }
+            }
+            &__name {
+                font-size: 32px;
+                line-height: 40.58px;
+            }
+        }
+
+        .call {
+            display: none;
+        }
+    }
+
+    .open {
+        padding: 49px 165px 0px 165px;
+        display: flex;
+
+        .slider__item {
+            .advantages {
+                width: 33%;
+            }
+
+            .foto-block {
+                width: 50%;
+
+                .foto {
+                    object-position: calc(100% - 0px) 12px;
+                }
+
+                .circl-figure {
+                    &.name {
+                        top: 249px;
+                        right: 348px;
+                    }
+
+                    &.profession {
+                        top: -2px;
+                        right: 120px;
+                    }
+                }
+            }
+        }
+    }
+
+    .vacancy {
+        margin-bottom: 526px;
+        position: relative;
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: -14px;
+            padding: 73px 0px 0 0px;
+        }
+        .slider-btn {
+            display: block;
+            position: relative;
+            bottom: 0px;
+            width: 100px;
+            margin-top: -13px;
+            .swiper-btn {
+                padding: 0px 15px;
+            }
+        }
+        &__title {
+            padding: 0px;
+            margin-bottom: 32px;
+        }
+
+        &__slide {
+            height: 480px;
+            position: absolute;
+
+            .swiper-slide {
+                background-color: #f5f5f5;
+                margin-right: 27px;
+
+                &:first-child {
+                    margin-left: 41px;
+                }
+
+                .vacancy-foto {
+                    object-fit: contain;
+                    object-position: 13px 90px;
+                }
+
+                .vacancy-proff {
+                    top: 21px;
+                    left: 22px;
+                }
+
+                .vacancy-do {
+                    top: 387px;
+                    left: 18px;
+                    padding: 0px 42px 0 0px;
+                    display: none;
+                }
+            }
+
+            .swiper-slide--active {
+                background-color: #ffdf31;
+
+                .vacancy-foto {
+                    opacity: 0;
+                }
+                .vacancy-do {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .instagram {
+        padding: 26px 165px 20px;
+
+        &__title {
+            align-self: flex-start;
+        }
+        &__data {
+            margin-bottom: 28px;
+            grid-template-columns: repeat(4, 1fr);
+            .insta-foto {
+                width: 255px;
+                height: 255px;
+                grid-column: span 1;
+                grid-row: span 1;
+                &:first-child {
+                    width: 540px;
+                    height: 540px;
+                    grid-column: span 2;
+                    grid-row: span 2;
+                    margin-bottom: 0px;
+                }
+                &:first-child {
+                    margin-right: 9px;
+                }
+                &:nth-child(2) {
+                    width: 255px;
+                    height: 255px;
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+            }
+        }
+        &__button:hover {
+            background-color: #ffdf31;
+        }
+    }
+    .geography {
+        padding: 0;
+        &__title {
+            font-size: 32px;
+            line-height: 40.58px;
+            padding-left: 0px;
+        }
+        .map {
+            height: 613px;
+            .filter-block {
+                bottom: 95px;
+                left: 22px;
+            }
+        }
+    }
+
+    .footer {
+        padding: 70px 165px 8px;
+        .wrapper {
+            .common {
+                margin-right: 10.5%;
+            }
+        }
+        .copirite {
+            padding: 24px 29px 0 0px;
+
+            .copirite__politic {
+                padding-right: 208px;
+            }
+            .copirite__sight {
+            }
+            .modal {
+                .content {
+                    width: 75%;
+                }
+
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                .modal-body {
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}

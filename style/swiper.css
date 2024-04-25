@@ -1,0 +1,29 @@
+.swiper-container {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .swiper {
+        overflow-x: clip;
+    }
+}
+@media (min-width: 768px) {
+    .vacancy {
+        .swiper-wrapper {
+            margin-left: 0px;
+        }
+    }
+}
+@media (min-width: 1280px) {
+    .vacancy {
+        .swiper-wrapper {
+            margin-left: -201px;
+        }
+    }
+}
